@@ -1,4 +1,5 @@
-[build-system]
+# Cell: Update pyproject.toml configuration for nbdev3 standard
+toml_content = """[build-system]
 requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
@@ -8,28 +9,42 @@ description = "sum thang from nuttin!"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
-authors = [{name = "mildmill2", email = "mildother2@gmail.com"}]
-keywords = ["nbdev", "jupyter", "notebook"]
+authors = [{name = "mildhorton", email = "mildrien_i_horton@proton.com"}]
+keywords = ["nbdev", "jupyter", "notebook", "quantum", "fastapi"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
 ]
 dynamic = ["version"]
-dependencies = []
+dependencies = [
+    "fastapi>=0.110.0",
+    "fasthx>=0.0.1",
+    "pennylane>=0.45.0",
+    "qbraid>=0.12.1",
+    "nibabel>=5.2.0",
+    "torch>=2.12.0",
+    "transformers>=5.9.0"
+]
 
 [project.urls]
-Repository = "https://github.com/mildmill2/{repo}"
-Documentation = "https://mildmill2.github.io/SumbumsTeaTime/"
+Repository = "https://github.com/mildhorton/SumbumsTeaTime"
+Documentation = "https://mildhorton.github.io/SumbumsTeaTime/"
 
 [tool.setuptools.dynamic]
-version = {attr = "{lib_path}.__version__"}
+version = {attr = "SumbumsTeaTime.__version__"}
 
 [tool.setuptools.packages.find]
-include = ["{lib_path}"]
+include = ["SumbumsTeaTime"]
 
 [tool.nbdev]
-nbs_path = "."
+nbs_path = "nbs"
 doc_path = "_docs"
-recursive = false
+lib_path = "SumbumsTeaTime"
+recursive = "True"
+"""
+
+with open("pyproject.toml", "w") as f:
+    f.write(toml_content)
+
+print("✅ pyproject.toml successfully configured with your library settings and active dependencies!")
