@@ -1,0 +1,4 @@
+_docs/
+_proc/
+.pre-commit-config.yaml
+.git-credentials

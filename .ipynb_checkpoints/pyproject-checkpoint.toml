@@ -1,0 +1,10 @@
+nbdev-create-config \
+  --repo SumbumsTeaTime \
+  --branch main \
+  --user mildmill2 \
+  --author "Mild Other" \
+  --author_email "mildother2@gmail.com" \
+  --description "sum thang from nuttin!" \
+  --path . \
+  --min_python 3.10 \
+  --license Apache-2.0
