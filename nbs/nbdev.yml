@@ -2,8 +2,8 @@ project:
   output-dir: _docs
 
 website:
-  title: "SumbumsTeaTime"
+  title: ""
   site-url: "/"
-  description: "..."
+  description: ""
   repo-branch: main
   repo-url: ""

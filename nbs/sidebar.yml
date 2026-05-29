@@ -1,0 +1,10 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_core-Copy1.ipynb
+      - 00_core.ipynb
+      - 01_vlm_translator.ipynb
+      - 02_main_api.ipynb
+      - 03_export_onnx.ipynb
+      - 04_tea_time_ui.ipynb
